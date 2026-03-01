@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 98%;
+    --foreground: 204 28% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 204 28% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 28% 7%;
+
+    --primary: 280 60% 40%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 50% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 204 15% 40%;
+
+    --accent: 300 84% 86%;
+    --accent-foreground: 204 28% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 270 50% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-medium;
+  }
+}
+
+@layer components {
+  .card-travel {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+  .travel-container {
+    @apply container mx-auto px-4 py-8 max-w-7xl;
+  }
+  .btn-travel {
+    @apply bg-purple-700 text-white hover:bg-purple-800 transition-colors duration-200;
+  }
+  .input-travel {
+    @apply border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-purple-500;
+  }
+  
+  /* Enhanced Card Styling */
+  .card-image-container {
+    @apply relative overflow-hidden h-48;
+  }
+  
+  .card-image {
+    @apply w-full h-full object-cover transition-transform duration-300 group-hover:scale-110;
+  }
+  
+  .card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  
+  .card-action-buttons {
+    @apply absolute bottom-4 right-4 flex space-x-2 transform translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-10;
+  }
+  
+  /* Badge styles */
+  .badge-promo {
+    @apply bg-red-500 text-white text-xs font-bold px-2 py-1 rounded shadow-md z-10 animate-pulse;
+  }
+  
+  .badge-type {
+    @apply bg-purple-700 text-white text-xs font-bold px-2 py-1 rounded shadow-md z-10;
+  }
+  
+  /* Destination card styles */
+  .destination-card {
+    @apply relative h-60 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .destination-image {
+    @apply w-full h-full object-cover transition-transform duration-500 hover:scale-110;
+  }
+  
+  .destination-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/70 to-transparent;
+  }
+  
+  .destination-content {
+    @apply absolute bottom-0 left-0 p-4 text-white;
+  }
+  
+  /* Section titles */
+  .section-title {
+    @apply text-2xl font-bold text-purple-700;
+  }
+  
+  .section-subtitle {
+    @apply text-sm text-gray-500;
+  }
+  
+  /* Enhanced gallery image display */
+  .gallery-image {
+    @apply rounded-lg shadow-md transition-transform hover:scale-[1.02] hover:shadow-lg cursor-pointer;
+  }
+  
+  /* Hero section improvements */
+  .hero-section {
+    @apply relative h-[550px] flex items-center;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-50;
+  }
+  
+  .hero-content {
+    @apply max-w-2xl text-white relative z-10 animate-fade-in;
+  }
+  
+  /* Promotional section enhancements */
+  .promo-icon {
+    @apply bg-purple-600 p-2 rounded-full mr-3;
+  }
+  
+  /* Travel details gallery */
+  .travel-gallery {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 mt-4;
+  }
+  
+  .travel-gallery-main {
+    @apply md:col-span-2 h-64 w-full;
+  }
+  
+  .travel-gallery-item {
+    @apply h-48 w-full object-cover rounded-lg shadow-md transition-all hover:shadow-lg hover:scale-[1.01];
+  }
+}
+

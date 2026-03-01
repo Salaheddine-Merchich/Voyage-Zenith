@@ -1,0 +1,7 @@
+
+project_id = "jvhdetgbiuyxdqxeenwp"
+
+[realtime]
+enabled = true
+notify_payload = "full"
+broadcast_tables = ["travel_offers"]
